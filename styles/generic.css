@@ -1,7 +1,13 @@
 h1 {
     font-family: Arial, sans-serif;
 }
+
 p {
     font-family: Arial, sans-serif;
     font-size: large;
+}
+
+#wrapper {
+    width: 80%;
+    margin: 0 auto;
 }
