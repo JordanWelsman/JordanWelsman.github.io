@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+// Import CSS
 import './HomePage.css';
 
 const myName = "Jordan";
@@ -12,9 +15,12 @@ const HomePage = () => {
           Data Scientist | Developer | AI Enthusiast
         </p>
         <div className="hero-links">
-          <a href="#projects" className="hero-btn">
+          <Link to="./components/Projects" className="hero-btn">
             View Projects
-          </a>
+          </Link>
+          {/* <a href="#projects" className="hero-btn">
+            View Projects
+          </a> */}
           <a href="#contact" className="hero-btn outline-btn">
             Contact Me
           </a>
