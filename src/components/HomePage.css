@@ -56,3 +56,14 @@
   background-color: #007bff;
   color: #fff;
 }
+
+.no-select {
+  user-select: none;         /* Standard */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Edge */
+}
+
+.default-cursor {
+  cursor: default;
+}

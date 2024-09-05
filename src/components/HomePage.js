@@ -7,8 +7,8 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <div className="hero-section">
-        <h1 className="hero-title">Hi, I'm {myName}.</h1>
-        <p className="hero-subtitle">
+        <h1 className="hero-title no-select default-cursor">Hi, I'm {myName}.</h1>
+        <p className="hero-subtitle no-select default-cursor">
           Data Scientist | Developer | AI Enthusiast
         </p>
         <div className="hero-links">
