@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Import CSS
-import './HomePage.css';
+import './styles/Home.css';
 
 const myName = "Jordan";
 
-const HomePage = () => {
+const Home = () => {
   return (
     <div className="homepage">
       <div className="hero-section">
@@ -15,19 +15,16 @@ const HomePage = () => {
           Data Scientist | Developer | AI Enthusiast
         </p>
         <div className="hero-links">
-          <Link to="./components/Projects" className="hero-btn">
+          <Link to="/projects" className="hero-btn">
             View Projects
           </Link>
-          {/* <a href="#projects" className="hero-btn">
-            View Projects
-          </a> */}
-          <a href="#contact" className="hero-btn outline-btn">
+          <Link to="/contact" className="hero-btn outline-btn">
             Contact Me
-          </a>
+          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default HomePage;
+export default Home;

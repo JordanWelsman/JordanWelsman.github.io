@@ -1,18 +1,28 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 // Import pages
-import HomePage from './components/HomePage';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import Projects from './components/Projects';
+import Publications from './components/Publications';
+import Contact from './components/Contact';
 
 function App() {
+  const location = useLocation(); // Get current location
+  console.log(location);
+
   return (
     <div>
+      {/* Conditionally render Navbar based on the current route */}
+      {location.pathname !== '/' && <Navbar />}
+
+      {/* Define routes */}
       <Routes>
-        {/* Route for the Home page */}
-        <Route path="/" element={<HomePage />} />
-        {/* Route for the Projects page */}
+        <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path ="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
