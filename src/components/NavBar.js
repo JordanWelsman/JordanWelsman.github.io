@@ -13,7 +13,8 @@ function Navbar() {
         <li><Link to="/publications">Publications</Link></li>
         <li><Link to="/contact">Contact Me</Link></li>
       </ul>
-      <Link to="/" className="cv-button">Download CV</Link>
+      {/* <Link to="/" className="cv-button">Download CV</Link> */}
+      <a href="/CV.pdf" target="_blank" rel="noopener noreferrer" className="cv-button">CV</a>
     </nav>
   );
 }
