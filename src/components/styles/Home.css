@@ -29,6 +29,13 @@
   gap: 1rem;
 }
 
+.chat-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
 .hero-btn {
   width: 100%;
   padding: 0.75rem 2rem;
@@ -43,6 +50,62 @@
 
 .hero-btn:hover {
   background-color: #0056b3;
+}
+
+.chat-btn {
+    width: 100%;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    background-clip: padding-box;
+    overflow: hidden;
+}
+
+.chat-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, rgba(255,0,0,0.4), rgba(255,165,0,0.4), rgba(255,255,0,0.4), rgba(0,128,0,0.4), rgba(0,255,255,0.4), rgba(0,0,255,0.4), rgba(238,130,238,0.4));
+    background-size: 200% 200%;
+    border-radius: 7px;
+    z-index: -1;
+    filter: blur(10px);
+    animation: rainbowGlowSlow 10s linear infinite;
+}
+
+.chat-btn:hover::before {
+    filter: blur(15px);
+}
+
+.chat-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+    background-size: 200% 200%;
+    z-index: -2;
+    border-radius: 5px;
+    animation: rainbowGlowSlow 10s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes rainbowGlowSlow {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
 .outline-btn {

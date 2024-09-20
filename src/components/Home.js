@@ -25,6 +25,11 @@ const Home = () => {
             Contact Me
           </Link>
         </div>
+        <div className="chat-links">
+            <Link to="/chat" className="chat-btn outline-btn">
+                Chat about Jordan
+            </Link>
+        </div>
       </div>
     </div>
   );
