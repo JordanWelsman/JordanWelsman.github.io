@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import './styles/Home.css';
 
 const myName = "Jordan";
+const role1 = "Data Scientist";
+const role2 = "Developer";
+const role3 = "AI Enthusiast";
 
 const Home = () => {
   return (
@@ -12,7 +15,7 @@ const Home = () => {
       <div className="hero-section">
         <h1 className="hero-title no-select default-cursor">Hi, I'm {myName}.</h1>
         <p className="hero-subtitle no-select default-cursor">
-          Data Scientist | Developer | AI Enthusiast
+          {role1} | {role2} | {role3}
         </p>
         <div className="hero-links">
           <Link to="/projects" className="hero-btn">
